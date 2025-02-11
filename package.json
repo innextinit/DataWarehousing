@@ -4,8 +4,14 @@
   "main": "server.js",
   "repository": "https://github.com/innextinit/DataWarehousing.git",
   "author": "Inioluwa Kola-Adelakin <innextinit@gmail.com>",
-  "contributors": [{"name": "Omoremi Adeleke <obn.adeleke@gmail.com>"},
-                    {"name": "Yara Aljahni <yara1.aljahni@famu.edu>"}],
+  "contributors": [
+    {
+      "name": "Omoremi Adeleke <obn.adeleke@gmail.com>"
+    },
+    {
+      "name": "Yara Aljahni <yara1.aljahni@famu.edu>"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
