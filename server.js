@@ -1,4 +1,6 @@
 require("dotenv").config();
+const mongodb = require("./src/config/database");
+mongodb.run();
 
 const express = require("express");
 
