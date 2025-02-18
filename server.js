@@ -7,6 +7,7 @@ const express = require("express");
 const app = express();
 
 const PORT = process.env.PORT;
+const mongoose = require("mongoose");
 
 //routing path
 app.get("/", (req, res) => {
