@@ -1,18 +1,14 @@
 require("dotenv").config();
-const mongodb = require("./src/config/database");
-mongodb.run();
+require("./src/config/database");
 
 const express = require("express");
+const home = require("./src/router/index");
 
 const app = express();
 
-const PORT = process.env.PORT;
-const mongoose = require("mongoose");
+app.use("/", home);
 
-//routing path
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
