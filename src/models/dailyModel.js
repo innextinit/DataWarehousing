@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema.Types;
 const DataSchema = new mongoose.Schema({
+  User: { type: ObjectId, ref: "User" },
   Date: { type: String, required: true },
   HH_MM_SS: { type: String, required: true },
   EventType: { type: String, required: true },

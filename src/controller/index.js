@@ -13,38 +13,55 @@ const helloController = (req, res) => {
 };
 
 const daily_path = path.join(__dirname, process.env.DAILY_PATH);
+
 async function uploadDailyNetwork(req, res) {
   fs.createReadStream(daily_path)
     .pipe(csv())
     .on("data", (data) => dailyResults.push(data))
     .on("end", async () => {
-      // console.log(dailyResults);
       try {
         await DailyModel.insertMany(dailyResults); // Save to MongoDB
         res.send("CSV data uploaded to MongoDB");
       } catch (error) {
-        // console.log(error);
-        // console.log(DailyModel.insertMany(results));
         res.status(500).send("Error inserting data");
       }
     });
 }
 
 const event_path = path.join(__dirname, process.env.EVENT_PATH);
+
 async function uploadEventCount(req, res) {
   fs.createReadStream(event_path)
     .pipe(csv())
     .on("data", (data) => eventResults.push(data))
     .on("end", async () => {
-      // console.log(results);
       try {
         await EventModel.insertMany(eventResults); // Save to MongoDB
         res.send("CSV data uploaded to MongoDB");
       } catch (error) {
-        // console.log(EventModel.insertMany(results);
         res.status(500).send("Error inserting data");
       }
     });
 }
+
+// create unique user from event count
+
+// if user exists, update event count, if not, insert new user
+
+// get all  users
+
+// get a user by id with events for that user
+
+// search event by network name e.g PushEvent
+
+// search network by hour to get all users within that hour
+
+// get all users with opened, closed
+
+// leaderboard of all event (e.g PushEvent with a count of 100)
+
+// delete a user by id
+
+// find the relationship between users and conversation
 
 module.exports = { helloController, uploadDailyNetwork, uploadEventCount };

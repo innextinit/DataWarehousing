@@ -8,7 +8,11 @@ for (let i = 0; i < 24; i++) {
 const DataSchema = new mongoose.Schema({
   Convo: { type: String, required: true },
   User: { type: String, required: true },
-  ...fields, // Spread the dynamically created fields
+  eventCount: [{
+    type: Number,
+    default: 0
+  }],
+  // ...fields, // Spread the dynamically created fields
   Total: { type: Number, required: true },
 });
 
