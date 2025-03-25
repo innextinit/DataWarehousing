@@ -1,10 +1,15 @@
 const Router = require("express");
-const { helloController, datasetController } = require("../controller/index");
+const {
+  helloController,
+  uploadDailyNetwork,
+  uploadEventCount,
+} = require("../controller/index");
 
 const router = Router();
 
 router.get("/", helloController);
 
-router.post("/", datasetController);
+router.post("/uploadDaily", uploadDailyNetwork);
+router.post("/uploadEvent", uploadEventCount);
 
 module.exports = router;
