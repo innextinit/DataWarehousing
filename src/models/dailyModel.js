@@ -1,14 +1,36 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema.Types;
+
 const DataSchema = new mongoose.Schema({
-  User: { type: ObjectId, ref: "User" },
-  Date: { type: String, required: true },
-  HH_MM_SS: { type: String, required: true },
-  EventType: { type: String, required: true },
-  UserID: { type: String, required: true },
-  RepoID: { type: String, required: true },
-  Status1: { type: String, required: false },
-  Status2: { type: String, required: false },
+  event: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "EventModel",
+  },
+  user: {
+    type: String,
+    required: true,
+  },
+  Date: { type: Date, default: new Date() },
+  HH_MM_SS: { type: String, default: "00:00:00" },
+  EventType: {
+    type: String,
+    enum: [
+      "PushEvent",
+      "IssueCommentEvent",
+      "PullRequestEvent",
+      "CreateEvent",
+      "PullRequestReviewCommentEvent",
+      "WatchEvent",
+      "IssuesEvent",
+      "ForkEvent",
+      "DeleteEvent",
+      "GollumEvent",
+    ],
+  },
+  repo: {
+    id: { type: String },
+    status: { type: String, enum: ["closed", "opened"] },
+    state: { type: Boolean },
+  },
 });
 
 module.exports = mongoose.model("DailyModel", DataSchema);

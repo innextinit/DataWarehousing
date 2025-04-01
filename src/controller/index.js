@@ -45,6 +45,47 @@ async function uploadEventCount(req, res) {
 }
 
 // create unique user from event count
+async function createEvent(req, res) {
+  const { file } = req;
+
+  try {
+    fs.createReadStream(file.path)
+      .pipe(csv())
+      .on("data", (data) => eventResults.push(data))
+      .on("end", async () => {
+        try {
+          console.log(eventResults);
+          res.send("CSV data uploaded to MongoDB");
+        } catch (error) {
+          res.status(500).send("Error inserting data");
+        }
+      });
+    return res.status(200);
+  } catch (error) {
+    return res.status(500).send("Error creating event");
+  }
+}
+
+async function createDailyModel(req, res) {
+  const { file } = req;
+
+  try {
+    fs.createReadStream(file.path)
+      .pipe(csv())
+      .on("data", (data) => eventResults.push(data))
+      .on("end", async () => {
+        try {
+          console.log(eventResults);
+          res.send("CSV data uploaded to MongoDB");
+        } catch (error) {
+          res.status(500).send("Error inserting data");
+        }
+      });
+    return res.status(200);
+  } catch (error) {
+    return res.status(500).send("Error creating daily model");
+  }
+}
 
 // if user exists, update event count, if not, insert new user
 
@@ -64,4 +105,10 @@ async function uploadEventCount(req, res) {
 
 // find the relationship between users and conversation
 
-module.exports = { helloController, uploadDailyNetwork, uploadEventCount };
+module.exports = {
+  helloController,
+  uploadDailyNetwork,
+  uploadEventCount,
+  createEvent,
+  createDailyModel,
+};
