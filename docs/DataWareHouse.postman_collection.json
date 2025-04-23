@@ -1,0 +1,990 @@
+{
+	"info": {
+		"_postman_id": "cbcc2584-661f-47d2-b4f7-ce24d7068cf4",
+		"name": "DataWareHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26895425",
+		"_collection_link": "https://solar-water-106489.postman.co/workspace/Inioluwa~c96bbe37-dae5-4264-bf3d-8abcb370b0be/collection/26895425-cbcc2584-661f-47d2-b4f7-ce24d7068cf4?action=share&source=collection_link&creator=26895425"
+	},
+	"item": [
+		{
+			"name": "Test Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Test Route",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}",
+							"host": [
+								"{{base_url}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-Lve95gjOVATpfV8EL5X4nxwjKHE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 02:38:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Hello World!"
+				}
+			]
+		},
+		{
+			"name": "Upload Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "EventCounts",
+							"type": "file",
+							"src": "postman-cloud:///1f01fec7-89ad-4000-a444-56d6e29303e9"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/event",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"event"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Event",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "EventCounts",
+									"type": "file",
+									"src": "postman-cloud:///1f01fec7-89ad-4000-a444-56d6e29303e9"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/event",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"event"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-QiyEabJdDahD7eyKVKGr1oSAhDg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 02:48:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "EventCounts CSV data uploaded to MongoDB"
+				}
+			]
+		},
+		{
+			"name": "Upload Daily Model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "DailyCounts",
+							"type": "file",
+							"src": "/Users/mainstackhawkeye/Documents/FAMU/DataWarehousing/dataset/DailyNetworks/jliu/DailyNetworks/2015-01-01.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/dailyModel",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"dailyModel"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Daily Model",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "DailyCounts",
+									"type": "file",
+									"src": "/Users/mainstackhawkeye/Documents/FAMU/DataWarehousing/dataset/DailyNetworks/jliu/DailyNetworks/2015-01-01.csv"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/dailyModel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dailyModel"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-N2OKlOxqXVyMoPcXo0Dl1aRo7+w\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:02:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "436 Daily Network records uploaded to MongoDB"
+				}
+			]
+		},
+		{
+			"name": "Upsert Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Event",
+							"type": "file",
+							"src": "/Users/mainstackhawkeye/Documents/FAMU/DataWarehousing/dataset/Event Counts/jliu/event_counts/daily/CommitCommentEvent_2015-01-02.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/upsertEvent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"upsertEvent"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upsert Event",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Event",
+									"type": "file",
+									"src": "/Users/mainstackhawkeye/Documents/FAMU/DataWarehousing/dataset/Event Counts/jliu/event_counts/daily/CommitCommentEvent_2015-01-02.csv"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/upsertEvent",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"upsertEvent"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-DVD4Y4K3Ye5/nZ9J4mIHN5xI9ic\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:13:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "1 records processed and upserted successfully"
+				}
+			]
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ca-Ee5soJKwUTf7v/dFybnARPFbtuA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:14:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"680854f993f12c3b674f2418\",\n        \"user\": \"MtbOJTomDgQlUFa7jNr_NQ\"\n    },\n    {\n        \"_id\": \"680854f993f12c3b674f2419\",\n        \"user\": \"--6mzHIvjkAFrubSerIIhQ\"\n    },\n    {\n        \"_id\": \"68085ad893f12c3b674f25f8\",\n        \"user\": \"DfQjSeYNw5e090tp8bgf3A\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get One User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users/{{user_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get One User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"{{user_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "273"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"111-T+KA4A8TqS80bXvDrbJBny58VLI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:16:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"680854f993f12c3b674f2418\",\n    \"user\": \"MtbOJTomDgQlUFa7jNr_NQ\",\n    \"__v\": 0,\n    \"convo\": [\n        {\n            \"id\": \"9kOZqznk3mWeot_pLiJsmg/zVseSUfjBEdseIzUdPtXmg\",\n            \"hr_of_the_day\": [\n                0,\n                1,\n                2,\n                3,\n                4,\n                5,\n                6,\n                7,\n                8,\n                9,\n                10,\n                11,\n                12,\n                13,\n                14,\n                15,\n                16,\n                17,\n                18,\n                19,\n                20,\n                21,\n                22,\n                23\n            ],\n            \"total_of_the_day\": 1,\n            \"_id\": \"680854f6e005dfe8e77d3b26\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Search event type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/search/eventType?type=CommitCommentEvent",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search",
+						"eventType"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "CommitCommentEvent"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search event type",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/search/eventType?type=CommitCommentEvent",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search",
+								"eventType"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "CommitCommentEvent"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "775"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"307-lrbaOAlTkuybCWuDaq8i3tUTLmw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:20:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"repo\": {\n            \"id\": \"9kOZqznk3mWeot_pLiJsmg/zVseSUfjBEdseIzUdPtXmg\",\n            \"status\": \"closed\",\n            \"state\": false\n        },\n        \"_id\": \"680858516aa9aea9ccde0793\",\n        \"user\": \"MtbOJTomDgQlUFa7jNr_NQ\",\n        \"Date\": \"2015-01-01T05:00:00.000Z\",\n        \"HH_MM_SS\": \"03:21:46\",\n        \"EventType\": \"CommitCommentEvent\",\n        \"__v\": 0\n    },\n    {\n        \"repo\": {\n            \"id\": \"_1lO_isd7Xvo8YfwxIA0XA/Emd0vWTwnzA9PCp6a5h73g\",\n            \"status\": \"closed\",\n            \"state\": false\n        },\n        \"_id\": \"680858516aa9aea9ccde0880\",\n        \"user\": \"--6mzHIvjkAFrubSerIIhQ\",\n        \"Date\": \"2015-01-01T05:00:00.000Z\",\n        \"HH_MM_SS\": \"17:28:31\",\n        \"EventType\": \"CommitCommentEvent\",\n        \"__v\": 0\n    },\n    {\n        \"repo\": {\n            \"id\": \"_1lO_isd7Xvo8YfwxIA0XA/Emd0vWTwnzA9PCp6a5h73g\",\n            \"status\": \"closed\",\n            \"state\": false\n        },\n        \"_id\": \"680858516aa9aea9ccde08d8\",\n        \"user\": \"--6mzHIvjkAFrubSerIIhQ\",\n        \"Date\": \"2015-01-01T05:00:00.000Z\",\n        \"HH_MM_SS\": \"20:57:33\",\n        \"EventType\": \"CommitCommentEvent\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Search event hour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/search/hour?hour=12",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search",
+						"hour"
+					],
+					"query": [
+						{
+							"key": "hour",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Search event hour",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/search/hour?hour=12",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search",
+								"hour"
+							],
+							"query": [
+								{
+									"key": "hour",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "549"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"225-TjckvouMCP8zHvJ3drG499b0/w0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:21:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"680854f993f12c3b674f2418\",\n        \"user\": \"MtbOJTomDgQlUFa7jNr_NQ\",\n        \"__v\": 0,\n        \"convo\": [\n            {\n                \"id\": \"9kOZqznk3mWeot_pLiJsmg/zVseSUfjBEdseIzUdPtXmg\",\n                \"hr_of_the_day\": [\n                    0,\n                    1,\n                    2,\n                    3,\n                    4,\n                    5,\n                    6,\n                    7,\n                    8,\n                    9,\n                    10,\n                    11,\n                    12,\n                    13,\n                    14,\n                    15,\n                    16,\n                    17,\n                    18,\n                    19,\n                    20,\n                    21,\n                    22,\n                    23\n                ],\n                \"total_of_the_day\": 1,\n                \"_id\": \"680854f6e005dfe8e77d3b26\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"680854f993f12c3b674f2419\",\n        \"user\": \"--6mzHIvjkAFrubSerIIhQ\",\n        \"__v\": 0,\n        \"convo\": [\n            {\n                \"id\": \"_1lO_isd7Xvo8YfwxIA0XA/Emd0vWTwnzA9PCp6a5h73g\",\n                \"hr_of_the_day\": [\n                    0,\n                    1,\n                    2,\n                    3,\n                    4,\n                    5,\n                    6,\n                    7,\n                    8,\n                    9,\n                    10,\n                    11,\n                    12,\n                    13,\n                    14,\n                    15,\n                    16,\n                    17,\n                    18,\n                    19,\n                    20,\n                    21,\n                    22,\n                    23\n                ],\n                \"total_of_the_day\": 2,\n                \"_id\": \"680854f6e005dfe8e77d3b28\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Repo Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users/repoStatus?status=closed",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"repoStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "closed"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Repo Status",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/repoStatus?status=closed",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"repoStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "closed"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e-AeuUaVSDFyr5HsjCcV+fKNkZtqs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:24:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User not found"
+				}
+			]
+		},
+		{
+			"name": "Leaderboard Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/leaderboard/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"leaderboard",
+						"events"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Leaderboard Events",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/leaderboard/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"leaderboard",
+								"events"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "426"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1aa-w4Cq1Sh2KDhyOZpMjKZL+Ux4Mx4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:25:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"PushEvent\",\n        \"count\": 143\n    },\n    {\n        \"_id\": \"IssueCommentEvent\",\n        \"count\": 85\n    },\n    {\n        \"_id\": \"PullRequestEvent\",\n        \"count\": 42\n    },\n    {\n        \"_id\": \"DeleteEvent\",\n        \"count\": 37\n    },\n    {\n        \"_id\": \"ForkEvent\",\n        \"count\": 33\n    },\n    {\n        \"_id\": \"WatchEvent\",\n        \"count\": 30\n    },\n    {\n        \"_id\": \"IssuesEvent\",\n        \"count\": 21\n    },\n    {\n        \"_id\": \"CreateEvent\",\n        \"count\": 20\n    },\n    {\n        \"_id\": \"PullRequestReviewCommentEvent\",\n        \"count\": 11\n    },\n    {\n        \"_id\": \"GollumEvent\",\n        \"count\": 9\n    },\n    {\n        \"_id\": \"CommitCommentEvent\",\n        \"count\": 3\n    },\n    {\n        \"_id\": \"PublicEvent\",\n        \"count\": 2\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "User Convo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/userConvo",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userConvo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Convo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userConvo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userConvo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "741"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e5-VxPt5KXhgMRpt3Rq2C8o4TqCBe8\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:26:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"680854f993f12c3b674f2418\",\n        \"user\": \"MtbOJTomDgQlUFa7jNr_NQ\",\n        \"convo\": [\n            {\n                \"id\": \"9kOZqznk3mWeot_pLiJsmg/zVseSUfjBEdseIzUdPtXmg\",\n                \"hr_of_the_day\": [\n                    0,\n                    1,\n                    2,\n                    3,\n                    4,\n                    5,\n                    6,\n                    7,\n                    8,\n                    9,\n                    10,\n                    11,\n                    12,\n                    13,\n                    14,\n                    15,\n                    16,\n                    17,\n                    18,\n                    19,\n                    20,\n                    21,\n                    22,\n                    23\n                ],\n                \"total_of_the_day\": 1,\n                \"_id\": \"680854f6e005dfe8e77d3b26\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"680854f993f12c3b674f2419\",\n        \"user\": \"--6mzHIvjkAFrubSerIIhQ\",\n        \"convo\": [\n            {\n                \"id\": \"_1lO_isd7Xvo8YfwxIA0XA/Emd0vWTwnzA9PCp6a5h73g\",\n                \"hr_of_the_day\": [\n                    0,\n                    1,\n                    2,\n                    3,\n                    4,\n                    5,\n                    6,\n                    7,\n                    8,\n                    9,\n                    10,\n                    11,\n                    12,\n                    13,\n                    14,\n                    15,\n                    16,\n                    17,\n                    18,\n                    19,\n                    20,\n                    21,\n                    22,\n                    23\n                ],\n                \"total_of_the_day\": 2,\n                \"_id\": \"680854f6e005dfe8e77d3b28\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"68085ad893f12c3b674f25f8\",\n        \"user\": \"DfQjSeYNw5e090tp8bgf3A\",\n        \"convo\": [\n            {\n                \"id\": \"_1lO_isd7Xvo8YfwxIA0XA/Emd0vWTwnzA9PCp6a5h73g\",\n                \"hr_of_the_day\": [\n                    4,\n                    5\n                ],\n                \"total_of_the_day\": 2,\n                \"_id\": \"68085ad58871cde94333cefe\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users/{{user_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/{{user_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"{{user_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "12"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c-xxNNZ5X7WQj0DW7feQn4lhVK2VM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 23 Apr 2025 03:28:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User deleted"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": "MtbOJTomDgQlUFa7jNr_NQ",
+			"type": "default"
+		},
+		{
+			"key": "user_id",
+			"value": "MtbOJTomDgQlUFa7jNr_NQ",
+			"type": "default"
+		}
+	]
+}
