@@ -24,6 +24,8 @@ const DataSchema = new mongoose.Schema({
       "ForkEvent",
       "DeleteEvent",
       "GollumEvent",
+      "CommitCommentEvent",
+      "PublicEvent",
     ],
   },
   repo: {
