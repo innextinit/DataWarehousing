@@ -5,8 +5,8 @@ This project is geared towards giving students practice in designing, implementi
 ## Team and Group Information
 
 - Team Size: 2-3 members
-- Group Coordinator: [Coordinator Name]
-- Group Members: [Member 1], [Member 2], [Member 3]
+- Group Coordinator: Omoremi
+- Group Members: Omoremi, Yara and Inioluwa
 
 ## Project Overview
 
